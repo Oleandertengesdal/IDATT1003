@@ -1,4 +1,4 @@
-package Øvinger.øving4.oppgave1;
+package ovinger.oving4.oppgave1;
 
 public class Valuta {
 
@@ -8,7 +8,7 @@ public class Valuta {
     public Valuta(String navn, double kurs) {
         this.navn = navn;
         this.kurs = kurs;
-        
+
     }
 
     public double tilNok(double belop) {
@@ -31,7 +31,4 @@ public class Valuta {
         this.kurs = kurs;
     }
 
-    
-    
-    
 }
