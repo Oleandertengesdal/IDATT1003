@@ -1,3 +1,5 @@
+package ovinger.oving3;
+
 import java.util.Scanner;
 
 public class oppgave2 {
