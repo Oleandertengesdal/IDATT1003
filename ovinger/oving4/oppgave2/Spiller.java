@@ -7,7 +7,7 @@ public class Spiller {
     Random terning  = new Random();
 
     // lager verdier
-    private String navn;
+    private final String navn;
     private boolean ferdig;
     private int sumPoeng;
 
