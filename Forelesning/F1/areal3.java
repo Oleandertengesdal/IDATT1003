@@ -1,7 +1,7 @@
 
 import static javax.swing.JOptionPane.*;
 
- class Arealberegning2 {
+ class Arealberegning1 {
 
     public static void main(String[] args) {
         String lengdeLest = showInputDialog("Lengde(meter): ");
