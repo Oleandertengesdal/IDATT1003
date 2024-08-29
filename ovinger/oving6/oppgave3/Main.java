@@ -18,8 +18,10 @@ public class Main {
 
         
 
-        Matrise result = m1.Addisjon(m1, m2);
+        Matrise result = m1.Addisjon(m2);
         System.out.println("Resultatet av addisjonen er: ");
         result.printMatrix();
+
+        Matrise result2 = m1.multiplikasjon(m2);
     }
 }
