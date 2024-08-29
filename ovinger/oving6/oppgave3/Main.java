@@ -4,13 +4,13 @@ public class Main {
     public static void main(String[] args) {
 
         int[][] data1 = {
-                {1, 2, 1},
-                {3, 2, 1},
+                {1, 2},
+                {3, 2},
         };
 
         int[][] data2 = {
-                {1, 2, 1},
-                {3, 2, 1},
+                {1, 2},
+                {3, 2},
         };
 
         Matrise m1 = new Matrise(data1);
@@ -23,5 +23,7 @@ public class Main {
         result.printMatrix();
 
         Matrise result2 = m1.multiplikasjon(m2);
+        System.out.println("Resultatet av multiplikasjonen er: ");
+        result2.printMatrix();
     }
 }

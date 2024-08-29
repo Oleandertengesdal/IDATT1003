@@ -48,17 +48,30 @@ public class Matrise {
             return null;
         }
         int[][] result = new int[m1.martix.length][m1.martix[0].length];
-        for (int i = 0; i < m1.martix.length; i++) {
-            for (int j = 0; j < m1.martix[i].length; j++) {
+
+        result[0][0] = martix[0][0] * m1.martix[0][0] + martix[0][1] * m1.martix[1][0];
+        result[1][0] = martix[1][0] * m1.martix[0][0] + martix[1][1] * m1.martix[1][0];
+        result[0][1] = martix[0][0] * m1.martix[0][1] + martix[0][1] * m1.martix[1][1];
+        result[1][1] = martix[1][0] * m1.martix[0][1] + martix[1][1] * m1.martix[1][1];
+
                 /*
                 [a, b * [e, f = [a*e + b*g, a*f + b*h
                  c, d]   g, h].  c*e + d*g, c*f + d*h]
                  */
 
+
+        return new Matrise(result);
+    }
+
+    public Matrise transpose() {
+        int[][] result = new int[martix.length][martix[0].length];
+
+        for (int i = 0; i < martix.length; i++) {
+            for (int j = 0; j < martix[0].length; j++) {
+                
             }
         }
-
-        return null;
+        return new Matrise(result);
     }
 
     //Måte å printe ut matrisen på
@@ -67,4 +80,6 @@ public class Matrise {
             System.out.println(Arrays.toString(ints));
         }
     }
+
+
 }
