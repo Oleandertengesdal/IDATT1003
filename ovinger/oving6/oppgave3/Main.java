@@ -8,6 +8,18 @@ public class Main {
                 {3, 2, 1},
         };
 
+        int[][] data2 = {
+                {1, 2, 1},
+                {3, 2, 1},
+        };
+
         Matrise m1 = new Matrise(data1);
+        Matrise m2 = new Matrise(data2);
+
+        
+
+        Matrise result = m1.Addisjon(m1, m2);
+        System.out.println("Resultatet av addisjonen er: ");
+        result.printMatrix();
     }
 }
