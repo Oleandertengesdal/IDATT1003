@@ -18,7 +18,7 @@ public class Main {
 
         
 
-        Matrise result = m1.Addisjon(m2);
+        Matrise result = m1.addisjon(m2);
         System.out.println("Resultatet av addisjonen er: ");
         result.printMatrix();
 

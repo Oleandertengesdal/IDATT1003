@@ -1,3 +1,5 @@
+package ovinger.oving1;
+
 class oppgave {
     public static void main(String[] args) {
         int sekunder = 4500;

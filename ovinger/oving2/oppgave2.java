@@ -1,3 +1,5 @@
+package ovinger.oving2;
+
 class kjottdeig {
     public static void main(String[] args) {
         double kjottdeig1Pris = 35.50;

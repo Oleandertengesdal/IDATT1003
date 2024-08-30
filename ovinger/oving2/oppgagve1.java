@@ -1,3 +1,5 @@
+package ovinger.oving2;
+
 class skuddaar {
 
     public static void main(String[] args) {

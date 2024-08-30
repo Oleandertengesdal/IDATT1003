@@ -1,3 +1,5 @@
+package ovinger.oving1;
+
 class timer_min_til_s {
     public static void main(String[] args) {
         int timer = 1; 

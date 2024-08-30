@@ -1,3 +1,5 @@
+package ovinger.oving3;
+
 import java.util.Scanner;
 
 class gangertabeller {
@@ -11,7 +13,7 @@ class gangertabeller {
             do {
                 System.out.println(a +"-gangen:");
                 for (int i = 1; i <= 10; i++) {
-                    System.out.println(a + " * " + i + " = " + a * i);
+                    System.out.println(a + " x " + i + " = " + a * i);
                 }
                 a++;
             } while (a <= b);
