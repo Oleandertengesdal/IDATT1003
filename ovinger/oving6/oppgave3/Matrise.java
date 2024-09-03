@@ -66,8 +66,8 @@ public class Matrise {
         int[][] result = new int[martix.length][martix[0].length];
 
         for (int i = 0; i < martix.length; i++) {
-            for (int j = 0; j < martix[0].length; j++) {
-                
+            for (int j = 0; j < martix[i].length; j++) {
+                result[j][i] = martix[i][j];
             }
         }
         return new Matrise(result);
