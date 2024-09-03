@@ -48,17 +48,11 @@ public class Matrise {
             return null;
         }
         int[][] result = new int[m1.martix.length][m1.martix[0].length];
-<<<<<<< Updated upstream
 
         result[0][0] = martix[0][0] * m1.martix[0][0] + martix[0][1] * m1.martix[1][0];
         result[1][0] = martix[1][0] * m1.martix[0][0] + martix[1][1] * m1.martix[1][0];
         result[0][1] = martix[0][0] * m1.martix[0][1] + martix[0][1] * m1.martix[1][1];
         result[1][1] = martix[1][0] * m1.martix[0][1] + martix[1][1] * m1.martix[1][1];
-=======
-        for (int i = 0; i < m1.martix.length; i++) {
-            for (int j = 0; j < m1.martix[i].length; j++) {
->>>>>>> Stashed changes
-
                 /*
                 [a, b * [e, f = [a*e + b*g, a*f + b*h
                  c, d]   g, h].  c*e + d*g, c*f + d*h]
