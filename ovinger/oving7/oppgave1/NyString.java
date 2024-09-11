@@ -23,7 +23,7 @@ public class NyString {
     public String fjernTegn(char tegn) {
         String
         fjernet = tekst;
-        while() {
+        while(true) {
             if ( fjernet.indexOf(tegn) > 0 ) {
                 fjernet += tekst.substring(tekst.indexOf(tegn) + 1);
             } else {
