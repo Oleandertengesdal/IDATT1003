@@ -21,13 +21,10 @@ public class NyString {
     }
 
     public String fjernTegn(char tegn) {
-        String
-        fjernet = tekst;
-        while(true) {
-            if ( fjernet.indexOf(tegn) > 0 ) {
-                fjernet += tekst.substring(tekst.indexOf(tegn) + 1);
-            } else {
-                break;
+        String fjernet = "";
+        for (int i = 0; i < tekst.length(); i++) {
+            if (tekst.charAt(i) != tegn) {
+                fjernet += tekst.charAt(i);
             }
         }
         return fjernet;
