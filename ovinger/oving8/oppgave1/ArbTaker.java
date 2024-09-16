@@ -73,4 +73,10 @@ public class ArbTaker {
     public double getSkatteTrekkAar() {
         return getSkatteTrekk() * 10 + (this.maanedslonn * this.skatteprosent * 0.5);
     }
+
+    public int getAntallAar() {
+        GregorianCalendar kalender = new GregorianCalendar();
+        int aar = kalender.get(Calendar.YEAR);
+        return aar - this.ansettelsesaar;
+    }
 }

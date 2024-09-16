@@ -5,10 +5,15 @@ public class Student {
     private String name;
     private int antOppg;
 
+
     public Student(String name, int antOppg) {
         this.name = name;
         this.antOppg = antOppg;
+    }
 
+    public Student(String name) {
+        this.name = name;
+        this.antOppg = 0;
     }
 
     public String getName() {
@@ -19,7 +24,9 @@ public class Student {
     }
 
     public void okAntOppg(int okning) {
-        this.antOppg += okning;
+        if (okning > 0) {
+            this.antOppg += okning;
+        }
     }
 
     public String toString() {

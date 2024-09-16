@@ -49,6 +49,7 @@ public class Main {
 
             if (input == 8) {
                 System.out.print("Avslutter programmet!");
+                sc.close();
                 break;
             }
 
@@ -58,16 +59,28 @@ public class Main {
                     System.out.println("Arbeids takeren trekkes " + a1.getSkatteTrekk() + "kr i skat pr måned.");
                     break;
                 case 2:
+                    System.out.println("Bruttolønn per år: " + a1.getBruttoLonn());
                     break;
                 case 3:
+                    System.out.println("Skatte trekk per år: " + a1.getSkatteTrekkAar());
                     break;
                 case 4:
+                    System.out.println("Navn: " + a1.getNavn());
                     break;
                 case 5:
+                    System.out.println("Alder: " + a1.getAlder());
                     break;
                 case 6:
+                    System.out.println("Antall år i bedriften: " + a1.getAntallAar());
                     break;
                 case 7:
+                    System.out.print("Hvor mange år vil du se om den ansatte har jobbet: ");
+                    int aar = sc.nextInt();
+                    if(a1.harJobbetI(aar)) {
+                        System.out.println(a1.getNavn() + " har jobbet i " + aar + " år.");
+                    } else {
+                        System.out.println(a1.getNavn() + " har ikke jobbet i " + aar + " år.");
+                    }
                     break;
                 default:
                     System.out.println("Velg på nytt.");
