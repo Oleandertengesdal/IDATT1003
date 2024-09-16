@@ -55,6 +55,7 @@ public class Main {
 
             switch (input) {
                 case 1:
+                    System.out.println("Arbeids takeren trekkes " + a1.getSkatteTrekk() + "kr i skat pr måned.");
                     break;
                 case 2:
                     break;
