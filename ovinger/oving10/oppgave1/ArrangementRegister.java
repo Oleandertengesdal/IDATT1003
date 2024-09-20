@@ -1,7 +1,6 @@
 package ovinger.oving10.oppgave1;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ArrangementRegister {
 
@@ -15,11 +14,11 @@ public class ArrangementRegister {
         arrangements.add(arrangment);
     }
 
-    public List<Arrangment> getArrangements() {
+    public ArrayList<Arrangment> getArrangements() {
         return arrangements;
     }
 
-    public List<Arrangment> finnArrangementSted(String sted) {
+    public ArrayList<Arrangment> finnArrangementSted(String sted) {
         return arrangements;
     }
 }
