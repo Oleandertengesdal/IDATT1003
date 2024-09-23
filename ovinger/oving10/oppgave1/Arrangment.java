@@ -12,7 +12,7 @@ public class Arrangment {
 
     // Unik ID til arrangementet
     private final int ID;
-
+    private static int idCounter = 1;
     // Navnet til arrangementet.
     private String name;
 
@@ -32,9 +32,10 @@ public class Arrangment {
     /*
      * Konstruktøren til klassen
      */
-    public Arrangment(int id, String name, long dato, String type, String place, String arrangor) {
+    public Arrangment(String name, long dato, String type, String place, String arrangor) {
         this.name = name;
-        this.ID = id;
+        this.ID = idCounter;
+        idCounter++;
         this.dato = dato;
         this.type = type;
         this.place = place;
