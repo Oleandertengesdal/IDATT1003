@@ -31,6 +31,7 @@ løkkegjennomløp skal programmet sende passende get-meldinger til objektet og s
 resultatet av disse, slik at det er mulig å kontrollere at endringen er blitt utført. Lag eventuelt
 toStrin()-metoder og bruk disse.
  */
+
 public class Main {
     public static void main(String[] args) {
 
