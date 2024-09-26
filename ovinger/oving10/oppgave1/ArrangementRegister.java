@@ -10,13 +10,16 @@ public class ArrangementRegister {
         this.arrangements = new ArrayList<Arrangment>();
     }
 
+
     public void addArrangment(Arrangment arrangment) {
         arrangements.add(arrangment);
     }
 
+
     public ArrayList<Arrangment> getArrangements() {
         return arrangements;
     }
+
 
     public ArrayList<Arrangment> finnArrangementSted(String sted) {
         return arrangements;
