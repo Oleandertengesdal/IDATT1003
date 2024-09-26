@@ -11,9 +11,11 @@ public class ArrangementRegister {
         this.arrangements = new ArrayList<Arrangment>();
     }
 
+
     public void addArrangment(Arrangment arrangment) {
         arrangements.add(arrangment);
     }
+
 
     public ArrayList<Arrangment> getArrangementsSted(String sted) {
         ArrayList<Arrangment> temp = new ArrayList<>();
