@@ -10,6 +10,13 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
+        register.addArrangment(new Arrangment("Kygo", 202310201800L, "Konsert", "Oslo", "Festivalfeber"));
+        register.addArrangment(new Arrangment("Les miserables", 202309151800L, "Teater", "Trondheim", "Samfunet"));
+        register.addArrangment(new Arrangment("Foredrag om plastik", 202311051700L, "Foredrag", "Trondheim", "NTNU"));
+        register.addArrangment(new Arrangment("Broiler", 202307051800L, "Konsert", "Stavanger", "UIS"));
+        register.addArrangment(new Arrangment("ONS", 202311211700L, "Foredrag", "Stavanger", "ONS"));
+        register.addArrangment(new Arrangment("Feelings", 202308031700L, "Festival", "Bergen", "UIB"));
+
 
         while (true) {
             System.out.println("1. Registrer nytt arrangement");
@@ -43,22 +50,27 @@ public class Main {
                     System.out.println("Tidspunkt (YYYYMMDDHHMM): ");
                     long tidspunkt = sc.nextLong();
 
-                    Arrangment nyttArrangement = new Arrangment(nummer, navn, tidspunkt, type, sted, arrang);
+                    Arrangment nyttArrangement = new Arrangment(navn, tidspunkt, type, sted, arrang);
                     register.addArrangment(nyttArrangement);
                 case 2:
+
                     // Finn arrangementer på et sted
                     System.out.print("Sted: ");
-                    String søkSted = sc.nextLine();
-                    ArrayList<Arrangment> stedListe = register.finnArrangementerSted(søkSted);
-                    stedListe.forEach(System.out::println);
+                    String sokSted = sc.next();
+                    ArrayList<Arrangment> stedListe = register.getArrangementsSted(sokSted);
+                    if (!stedListe.isEmpty()) {
+                        register.displayEvents(stedListe);;
+                    }
                     break;
 
                 case 3:
                     // Finn arrangementer på en dato
                     System.out.print("Dato (YYYYMMDD): ");
                     long dato = sc.nextLong();
-                    ArrayList<Arrangment> datoListe = register.finnArrangementerDato(dato);
-                    datoListe.forEach(System.out::println);
+                    ArrayList<Arrangment> datoListe = register.getArrangementDato(dato);
+                    if (!datoListe.isEmpty()) {
+                        register.displayEvents(datoListe);
+                    }
                     break;
 
                 case 4:
@@ -67,26 +79,27 @@ public class Main {
                     long startTid = sc.nextLong();
                     System.out.print("Slutttid (YYYYMMDDHHMM): ");
                     long sluttTid = sc.nextLong();
-                    ArrayList<Arrangment> intervallListe = register.finnArrangementerIntervall(startTid, sluttTid);
-                    intervallListe.forEach(System.out::println);
+                    ArrayList<Arrangment> intervallListe = register.getArrangementIntervall(startTid, sluttTid);
+                    register.displayEvents(intervallListe);;
                     break;
 
                 case 5:
                     // Sorter etter sted
-                    ArrayList<Arrangment> stedSortert = register.sorterEtterSted();
-                    stedSortert.forEach(System.out::println);
+                    ArrayList<Arrangment> stedSortert = register.getArrangementSortSted();
+                    register.displayEvents(stedSortert);;
+
                     break;
 
                 case 6:
                     // Sorter etter type
-                    ArrayList<Arrangment> typeSortert = register.sorterEtterType();
-                    typeSortert.forEach(System.out::println);
+                    ArrayList<Arrangment> typeSortert = register.getArrangementSortType();
+                    register.displayEvents(typeSortert);;
                     break;
 
                 case 7:
                     // Sorter etter tidspunkt
-                    ArrayList<Arrangment> tidSortert = register.sorterEtterTidspunkt();
-                    tidSortert.forEach(System.out::println);
+                    ArrayList<Arrangment> tidSortert = register.getArrangementSortTidspunkt();
+                    register.displayEvents(tidSortert);;
                     break;
 
                 case 0:

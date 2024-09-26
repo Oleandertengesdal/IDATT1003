@@ -102,7 +102,7 @@ public class Arrangment {
                 ", arrangor='" + arrangor + '\'' +
                 ", type='" + type + '\'' +
                 ", dato=" + printDato() +
-                '}';
+                '}' + '\n';
     }
 
 }
