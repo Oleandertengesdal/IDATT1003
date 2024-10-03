@@ -1,6 +1,6 @@
 package mappevurdering.del1;
 
-public class brukergrensesnitt {
+public class Brukergrensesnitt {
 
     public void start() {
 
