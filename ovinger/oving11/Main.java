@@ -15,5 +15,14 @@ public class Main {
 
         PropertyRegister register1 = new PropertyRegister();
 
+        register1.addProperty(property1);
+        register1.addProperty(property2);
+        register1.addProperty(property3);
+        register1.addProperty(property4);
+        register1.addProperty(property5);
+
+        UserInterface userInterface = new UserInterface(register1);
+
+        userInterface.start();
     }
 }

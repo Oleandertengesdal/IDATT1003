@@ -36,6 +36,7 @@ public class PropertyRegister {
     /**
      * Metode for å fjerne en eiendom fra registeret.
      * Sjekker om eiendommen faktisk finnes i registeret.
+     *
      * @param property Eiendommen som skal fjernes.
      */
     public void removeProperty(Property property) {
@@ -44,6 +45,15 @@ public class PropertyRegister {
         } else {
             throw new IllegalArgumentException("Property does not exist");
         }
+    }
+
+    /**
+     * Method to return all the properties in the register.
+     *
+     * @return all the properties in the register.
+     */
+    public ArrayList<Property> getProperties() {
+        return properties;
     }
 
     /**

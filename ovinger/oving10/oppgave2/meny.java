@@ -2,11 +2,11 @@ package ovinger.oving10.oppgave2;
 
 import java.util.ArrayList;
 
-public class Meny {
+public class meny {
 
     private ArrayList<Rett> meny;
 
-    public Meny () {
+    public meny() {
         this.meny = new ArrayList<Rett>();
     }
 

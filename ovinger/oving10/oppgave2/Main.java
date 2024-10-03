@@ -24,14 +24,14 @@ public class Main {
         register.registerRett(rett5);
         register.registerRett(rett6);
 
-        Meny meny1 = new Meny();
+        meny meny1 = new meny();
         meny1.addRett(rett1);
         meny1.addRett(rett2);
         meny1.addRett(rett3);
 
         register.registerMeny(meny1);
 
-        Meny meny2 = new Meny();
+        meny meny2 = new meny();
         meny2.addRett(rett4);
         meny2.addRett(rett5);
         meny2.addRett(rett6);
@@ -99,7 +99,7 @@ public class Main {
 
                 case 4:
                     // Registrer en ny meny
-                    Meny nyMeny = new Meny();
+                    meny nyMeny = new meny();
                     while (true) {
                         System.out.print("Legg til en rett i menyen (skriv inn navnet, eller 'ferdig' for å avslutte): ");
                         String rettNavnForMeny = sc.nextLine();
@@ -126,7 +126,7 @@ public class Main {
                     double maxPris = sc.nextDouble();
                     sc.nextLine();  // Rydder opp etter `nextDouble`
 
-                    ArrayList<Meny> menyerInnenIntervall = register.getMenyerPrisIntervall(minPris, maxPris);
+                    ArrayList<meny> menyerInnenIntervall = register.getMenyerPrisIntervall(minPris, maxPris);
                     if (!menyerInnenIntervall.isEmpty()) {
                         System.out.println("Fant følgende menyer innenfor prisintervallet " + minPris + " - " + maxPris + ":");
                         register.printMenyer(menyerInnenIntervall);  // Bruker printMenyer for å vise resultatet

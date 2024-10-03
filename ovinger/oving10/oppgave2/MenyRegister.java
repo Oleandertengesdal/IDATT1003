@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class MenyRegister {
 
     ArrayList<Rett> retter;
-    ArrayList<Meny> menyer;
+    ArrayList<meny> menyer;
 
     MenyRegister() {
         this.retter = new ArrayList<>();
@@ -36,13 +36,13 @@ public class MenyRegister {
         return types;
     }
 
-    public void registerMeny(Meny meny) {
+    public void registerMeny(meny meny) {
         menyer.add(meny);
     }
 
-    public ArrayList<Meny> getMenyerPrisIntervall(double minPris, double maxPris) {
-        ArrayList<Meny> prisIntervall = new ArrayList();
-        for (Meny meny : menyer) {
+    public ArrayList<meny> getMenyerPrisIntervall(double minPris, double maxPris) {
+        ArrayList<meny> prisIntervall = new ArrayList();
+        for (ovinger.oving10.oppgave2.meny meny : menyer) {
             double totalPris = meny.getPris();
             if(totalPris >= minPris && totalPris <= maxPris) {
                 prisIntervall.add(meny);
@@ -57,8 +57,8 @@ public class MenyRegister {
         }
     }
 
-    public void printMenyer(ArrayList<Meny> menyer) {
-        for (Meny meny : menyer) {
+    public void printMenyer(ArrayList<meny> menyer) {
+        for (ovinger.oving10.oppgave2.meny meny : menyer) {
             System.out.println("Meny:");
             for (Rett rett : meny.getMeny()) {  // Hent listen med retter fra menyen
                 System.out.println(" - " + rett.getName() + ": " + rett.getPris() + " kr");
