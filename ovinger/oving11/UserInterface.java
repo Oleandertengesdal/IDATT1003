@@ -11,6 +11,7 @@ public class UserInterface {
     private final int LIST_ALL_PROPERTIES = 2;
     private final int FIND_PROPERTY = 3;
     private final int CALCULATE_AVERAGE_AREA = 4;
+    private final int REMOVE_PROPERTY = 5;
     private final int EXIT = 9;
 
     //Makes so the userInterface is in the right property register
@@ -39,6 +40,7 @@ public class UserInterface {
         System.out.println("2. List all properties");
         System.out.println("3. Search property");
         System.out.println("4. Calculate average area");
+        System.out.println("5. Remove property");
         //TODO: Add more menus
         System.out.println("9. Quit");
         System.out.println("\nPlease enter a number between 1 and 9.\n");
@@ -51,6 +53,8 @@ public class UserInterface {
         }
         return menuChoice;
     }
+
+    int lotNumber, sectionNumber, municipalityNumber;
 
 
     /**
@@ -70,18 +74,18 @@ public class UserInterface {
 
                     // Read property details
                     System.out.print("Enter municipality number: ");
-                    int municipalityNumber = sc.nextInt();
+                    municipalityNumber = sc.nextInt();
                     sc.nextLine(); // clear the newline after interger input
 
                     System.out.println("Enter municipality name: ");
                     String municipalityName = sc.nextLine();
 
                     System.out.print("Enter lot number: ");
-                    int lotNumber = sc.nextInt();
+                    lotNumber = sc.nextInt();
                     sc.nextLine(); // clear the newline after integer input
 
                     System.out.println("Enter section number: ");
-                    int sectionNumber = sc.nextInt();
+                    sectionNumber = sc.nextInt();
                     sc.nextLine(); // clear the newline after integer input
 
                     System.out.println("Enter property name (no if you don't want name): ");
@@ -113,6 +117,7 @@ public class UserInterface {
                             System.out.println("Feilmelding: " + e);
                         }
                     }
+                    municipalityNumber = 0; lotNumber = 0; sectionNumber = 0;
                     break;
                 case LIST_ALL_PROPERTIES:
 
@@ -131,6 +136,28 @@ public class UserInterface {
                     break;
                 case FIND_PROPERTY:
 
+                    // Reads details from user.
+                    System.out.println("Enter municipality number: ");
+                    municipalityNumber = sc.nextInt();
+                    sc.nextLine();
+
+                    System.out.println("Enter lot number: ");
+                    lotNumber = sc.nextInt();
+                    sc.nextLine();
+
+                    System.out.println("Enter section number: ");
+                    sectionNumber = sc.nextInt();
+                    sc.nextLine();
+
+                    // Checks if the property exists.
+                    Property property = propertyRegister.getPropertyByID(municipalityNumber, lotNumber, sectionNumber);
+                    if (property != null) {
+                        System.out.println(property);
+                    } else {
+                        System.out.println("Property with ID " + municipalityNumber + "-" + lotNumber + "/" + sectionNumber + "not found.");
+                    }
+
+                    municipalityNumber = 0; lotNumber = 0; sectionNumber = 0;
                     break;
                 case CALCULATE_AVERAGE_AREA:
 
@@ -141,6 +168,35 @@ public class UserInterface {
                     } catch (Exception e) {
                         System.out.println("Feilmelding: " + e);
                     }
+                    break;
+                case REMOVE_PROPERTY:
+                    //Gets details from user.
+                    System.out.println("Enter municipality number: ");
+                    int munNumber = sc.nextInt();
+                    sc.nextLine();
+
+                    System.out.println("Enter lot number: ");
+                    lotNumber = sc.nextInt();
+                    sc.nextLine();
+
+                    System.out.println("Enter section number: ");
+                    sectionNumber = sc.nextInt();
+                    sc.nextLine();
+
+                    //Gets the property the user wants to delete.
+                    Property deleteProperty = propertyRegister.getPropertyByID(municipalityNumber, lotNumber, sectionNumber);
+
+                    // Double checks if the user wants to delete the property.
+                    System.out.println("Are you sure you want to delete: \n" + deleteProperty + " (y/n).");
+                    String check  = sc.nextLine();
+
+                    if (check.equalsIgnoreCase("y") || check.equalsIgnoreCase("yes")) {
+                        propertyRegister.removeProperty(deleteProperty);
+                        System.out.println("Property deleted.");
+                    } else {
+                        System.out.println("Did not delete: \n" + deleteProperty);
+                    }
+                    
                     break;
                 case EXIT:
                     System.out.println("Thank you for using the Properties app!\n");
