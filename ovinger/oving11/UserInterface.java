@@ -196,7 +196,7 @@ public class UserInterface {
                     } else {
                         System.out.println("Did not delete: \n" + deleteProperty);
                     }
-                    
+
                     break;
                 case EXIT:
                     System.out.println("Thank you for using the Properties app!\n");
