@@ -33,7 +33,7 @@ public class Main {
 
         //Til printing av antall tall.
         for (int i = 0; i < antallTall; i++) {
-            System.out.println(sumPerTall[i]);
+            System.out.println(i + ":" + sumPerTall[i]);
         }
     }
 }

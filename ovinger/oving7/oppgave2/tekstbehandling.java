@@ -2,9 +2,9 @@ package ovinger.oving7.oppgave2;
 
 public class tekstbehandling {
 
-    private String tekst;
+    private final String tekst;
 
-    public tekstbehandling(String initialValue) {
+    public tekstbehandling(final String initialValue) {
         this.tekst = initialValue;
     }
 
@@ -44,7 +44,18 @@ public class tekstbehandling {
     }
 
     public String skiftUtOrd(String str1, String str2) {
-        return str1 + " " + str2;
+        String[] ord = tekst.split(" ");
+        String nytekst = "";
+        for (int i = 0; i < ord.length; i++) {
+            if (ord[i].equals(str1)) {
+                nytekst += str2 + " ";
+            } else {
+                nytekst += ord[i] + " ";
+            }
+
+
+        }
+        return nytekst;
     }
 
     public String getTekstStorebokstaver() {

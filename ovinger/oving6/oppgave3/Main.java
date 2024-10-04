@@ -25,5 +25,9 @@ public class Main {
         Matrise result2 = m1.multiplikasjon(m2);
         System.out.println("Resultatet av multiplikasjonen er: ");
         result2.printMatrix();
+
+        Matrise result3 = m1.transpose();
+        System.out.println("Resultatet av transpose: ");
+        result3.printMatrix();
     }
 }
