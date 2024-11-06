@@ -41,6 +41,7 @@ package Forelesning.F5.Pricecalculation;/* Pricecalculation.java */
   }
 }
 */
+/*
 class Pricecalculation {
   public static void main(String[] args) {
     Groceries grocery1 = new Groceries("Norgesost", 124, 79.50);
@@ -48,7 +49,7 @@ class Pricecalculation {
 
   }
 }
-
+*/
 /* Kj�ring av programmet:
 
 124: Norgesost, pris pr. kg kr 79,50 u.moms.

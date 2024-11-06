@@ -24,9 +24,6 @@ class Groceries3 {
         if (startGroceryNr < 10000) {
             throw new IllegalArgumentException("Grocerynumber must have five digits");
         }
-        if (startPrice < 0.50) {
-            throw new IllegalArgumentException("Price must be at least 0.50");
-        }
         groceryName = startGroceryName;
         groceryNr = startGroceryNr;
         price = 0.0;

@@ -13,7 +13,7 @@ class Groceries {
     }
 
     public Groceries(String startGroceryName, int startGroceryNr) {
-        groveryName = startGroceryName;
+        groceryName = startGroceryName;
         groceryNr = startGroceryNr;
         price = 0.0;
     }

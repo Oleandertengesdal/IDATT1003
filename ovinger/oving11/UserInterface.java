@@ -88,7 +88,7 @@ public class UserInterface {
                     sectionNumber = sc.nextInt();
                     sc.nextLine(); // clear the newline after integer input
 
-                    System.out.println("Enter property name (no if you don't want name): ");
+                    System.out.println("Enter property name (\"no\" if you don't want name): ");
                     String name = sc.nextLine();
 
                     System.out.println("Enter property area: ");

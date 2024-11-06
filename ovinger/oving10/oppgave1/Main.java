@@ -59,7 +59,7 @@ public class Main {
                     String sokSted = sc.next();
                     ArrayList<Arrangment> stedListe = register.getArrangementsSted(sokSted);
                     if (!stedListe.isEmpty()) {
-                        register.displayEvents(stedListe);;
+                        register.displayEvents(stedListe);
                     }
                     break;
 

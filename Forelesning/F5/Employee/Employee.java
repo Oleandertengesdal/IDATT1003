@@ -19,7 +19,7 @@ class Employee {
 
   public Employee(int employeenr, String name, double salary) {
     if (employeenr < 1000 || employeenr > 9999) {
-         Throw new IllegalArgumentException(”Employee-number must have four digits”);
+         throw new IllegalArgumentException("Employee-number must have four digits");
     }
     this.employeenr = employeenr;
     this.name = name;
@@ -28,7 +28,7 @@ class Employee {
   
   public Employee(int employeenr, String name) {
     if (employeenr < 1000 || employeenr > 9999) {
-         Throw new IllegalArgumentException(”Employee-number must have four digits”);
+      throw new IllegalArgumentException("Employee-number must have four digits");
     }
     this.employeenr = employeenr;
     this.name = name;

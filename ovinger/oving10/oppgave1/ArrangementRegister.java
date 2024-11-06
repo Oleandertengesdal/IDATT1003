@@ -22,7 +22,7 @@ public class ArrangementRegister {
     public ArrayList<Arrangment> getArrangementsSted(String sted) {
         ArrayList<Arrangment> temp = new ArrayList<>();
         for (int i = 0; i < arrangements.size(); i++) {
-            if((arrangements.get(i).getName().equalsIgnoreCase(sted))) {
+            if((arrangements.get(i).getPlace().equalsIgnoreCase(sted))) {
                 temp.add(arrangements.get(i));
             }
         }

@@ -23,8 +23,6 @@ class Groceries {
     }
 
     public int getGroceryNr() {
-        6
-
         return groceryNr;
     }
 
