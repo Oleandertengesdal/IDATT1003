@@ -1,0 +1,21 @@
+@startuml
+actor User
+participant Main
+participant MenyRegister
+participant Rett
+participant meny
+
+User -> Main: Select option
+Main -> MenyRegister: registerRett(Rett)
+MenyRegister -> Rett: Create Rett instance
+MenyRegister -> MenyRegister: Add Rett to retter list
+Main -> MenyRegister: getRett(String name)
+MenyRegister -> Rett: Retrieve Rett by name
+Main -> MenyRegister: getRettType(String type)
+MenyRegister -> Rett: Retrieve Rett by type
+Main -> MenyRegister: registerMeny(meny)
+MenyRegister -> meny: Create meny instance
+MenyRegister -> MenyRegister: Add meny to menyer list
+Main -> MenyRegister: getMenyerPrisIntervall(double minPris, double maxPris)
+MenyRegister -> meny: Retrieve menyer within price range
+@enduml

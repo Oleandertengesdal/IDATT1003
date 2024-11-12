@@ -1,0 +1,48 @@
+@startuml
+class Main {
+}
+
+class Property {
+  - int municipalityNumber
+  - String municipalityName
+  - int lotNumber
+  - int sectionNumber
+  - String name
+  - double area
+  - String nameOfOwner
+  + getMunicipalityNumber(): int
+  + getMunicipalityName(): String
+  + getLotNumber(): int
+  + getSectionNumber(): int
+  + getName(): String
+  + getArea(): double
+  + getNameOfOwner(): String
+  + setMunicipalityNumber(int municipalityNumber)
+  + setMunicipalityName(String municipalityName)
+  + setLotNumber(int lotNumber)
+  + setSectionNumber(int sectionNumber)
+  + setName(String name)
+  + setArea(double area)
+  + setNameOfOwner(String nameOfOwner)
+}
+
+class PropertyRegister {
+  - ArrayList<Property> properties
+  + addProperty(Property property)
+  + removeProperty(Property property)
+  + searchProperty(int municipalityNumber, int lotNumber, int sectionNumber): Property
+  + getAllProperties(): ArrayList<Property>
+}
+
+class UserInterface {
+  - PropertyRegister register
+  + UserInterface(PropertyRegister register)
+  + start()
+  + displayMenu()
+  + handleUserInput()
+}
+
+Main --> PropertyRegister
+PropertyRegister "1" *-- "many" Property
+UserInterface --> PropertyRegister
+@enduml

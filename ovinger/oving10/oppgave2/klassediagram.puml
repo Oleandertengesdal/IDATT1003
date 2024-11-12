@@ -1,0 +1,40 @@
+@startuml
+class Main {
+}
+
+class MenyRegister {
+  - ArrayList<Rett> retter
+  - ArrayList<meny> menyer
+  + registerRett(Rett rett)
+  + getRett(String name): Rett
+  + getRettType(String type): ArrayList<Rett>
+  + registerMeny(meny meny)
+  + getMenyerPrisIntervall(double minPris, double maxPris): ArrayList<meny>
+  + printRetter(ArrayList<Rett> menyer)
+  + printMenyer(ArrayList<meny> menyer)
+}
+
+class Rett {
+  - String type
+  - String oppskrift
+  - String navn
+  - double pris
+  + getOppskrift(): String
+  + getType(): String
+  + getName(): String
+  + getPris(): double
+  + toString(): String
+}
+
+class meny {
+  - ArrayList<Rett> meny
+  + addRett(Rett r)
+  + getPris(): double
+  + getMeny(): ArrayList<Rett>
+  + printMeny()
+}
+
+MenyRegister "1" *-- "many" Rett
+MenyRegister "1" *-- "many" meny
+meny "1" *-- "many" Rett
+@enduml

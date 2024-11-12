@@ -1,0 +1,56 @@
+@startuml
+start
+
+:Initialize MenyRegister;
+:MenyRegister register = new MenyRegister();
+
+:Create Rett objects;
+:Rett rett1 = new Rett(...);
+:Rett rett2 = new Rett(...);
+:Rett rett3 = new Rett(...);
+:Rett rett4 = new Rett(...);
+:Rett rett5 = new Rett(...);
+:Rett rett6 = new Rett(...);
+
+:Register Rett objects in MenyRegister;
+register.registerRett(rett1);
+register.registerRett(rett2);
+register.registerRett(rett3);
+register.registerRett(rett4);
+register.registerRett(rett5);
+register.registerRett(rett6);
+
+:Create meny objects;
+:meny meny1 = new meny();
+:meny meny2 = new meny();
+
+:Add Rett objects to meny;
+meny1.addRett(rett1);
+meny1.addRett(rett2);
+meny1.addRett(rett3);
+
+meny2.addRett(rett4);
+meny2.addRett(rett5);
+meny2.addRett(rett6);
+
+:Register meny objects in MenyRegister;
+register.registerMeny(meny1);
+register.registerMeny(meny2);
+
+:User selects an option from the menu;
+
+:Perform corresponding operations;
+if (option == 1) then (Register new Rett)
+  :register.registerRett(new Rett(...));
+else if (option == 2) then (Find Rett by name)
+  :register.getRett(name);
+else if (option == 3) then (Find Rett by type)
+  :register.getRettType(type);
+else if (option == 4) then (Register new meny)
+  :register.registerMeny(new meny(...));
+else if (option == 5) then (Find meny within price range)
+  :register.getMenyerPrisIntervall(minPris, maxPris);
+endif
+
+stop
+@enduml

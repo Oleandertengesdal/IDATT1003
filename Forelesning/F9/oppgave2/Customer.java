@@ -7,9 +7,7 @@ public class Customer {
     private String password;
 
     public boolean login() {
-
-        // TODO: call to liveBank
-
-        return false;
+        Bank bank = new Bank();
+        return bank.validateUser(username, password);
     }
 }

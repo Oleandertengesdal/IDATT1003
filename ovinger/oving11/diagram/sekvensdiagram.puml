@@ -1,0 +1,34 @@
+@startuml
+actor User
+participant Main
+participant Property
+participant PropertyRegister
+participant UserInterface
+
+User -> Main: Start application
+Main -> Property: new Property(1445, "Gloppen", 77, 631, 1017.5, "Jens Olsen")
+Main -> Property: new Property(1445, "Gloppen", 77, 131, "Syningom", 661.3, "Nicolay Madsen")
+Main -> Property: new Property(1445, "Gloppen", 75, 19, "Fugletun", 650.6, "Evilyn Jensen")
+Main -> Property: new Property(1445, "Gloppen", 74, 188, 1457.2, "Karl Ove Bråten")
+Main -> Property: new Property(1445, "Gloppen", 69, 47, "Høiberg", 1339.4, "Elsa Indregård")
+
+Main -> PropertyRegister: new PropertyRegister()
+Main -> PropertyRegister: addProperty(property1)
+PropertyRegister -> Property: Add property1 to list
+Main -> PropertyRegister: addProperty(property2)
+PropertyRegister -> Property: Add property2 to list
+Main -> PropertyRegister: addProperty(property3)
+PropertyRegister -> Property: Add property3 to list
+Main -> PropertyRegister: addProperty(property4)
+PropertyRegister -> Property: Add property4 to list
+Main -> PropertyRegister: addProperty(property5)
+PropertyRegister -> Property: Add property5 to list
+
+Main -> UserInterface: new UserInterface(register1)
+Main -> UserInterface: start()
+
+User -> UserInterface: Interact with UI
+UserInterface -> PropertyRegister: Perform operations (e.g., add, remove, search properties)
+PropertyRegister -> Property: Perform operations on properties
+
+@enduml
