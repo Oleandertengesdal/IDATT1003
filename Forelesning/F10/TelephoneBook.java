@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 
-/**
+    /**
      *  En klasse som administrer en telefonkatalog.
     *  Vi bruker java.util.ArrayList
      *  @version 27.10 2019
